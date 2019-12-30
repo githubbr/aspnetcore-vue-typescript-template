@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 
 namespace AspNetCore.VueJs
 {
@@ -20,10 +21,10 @@ namespace AspNetCore.VueJs
             services.AddHttpClient();
             
             services.Configure<RouteOptions>(options => options.LowercaseUrls = true);
-            services.AddMvc();
+	    services.AddMvc(o => o.EnableEndpointRouting = false);
         }
 
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostEnvironment env)
         {
             if (env.IsDevelopment())
             {

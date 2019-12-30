@@ -9,7 +9,7 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/bin/Debug/netcoreapp2.0/AspNetCore.VueJs.dll",
+            "program": "${workspaceFolder}/bin/Debug/netcoreapp3.1/AspNetCore.VueJs.dll",
             "args": [],
             "cwd": "${workspaceFolder}",
             "stopAtEntry": false,
