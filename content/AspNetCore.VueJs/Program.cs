@@ -13,6 +13,7 @@ namespace AspNetCore.VueJs
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>()
+		.UseUrls("http://netcore.bmedia.design:44203")
                 .Build();
     }
 }
